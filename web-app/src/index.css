@@ -1,0 +1,11 @@
+.app {
+    display: flex;
+  }
+  
+  aside.primary-aside {
+    width: 200px;
+  }
+  
+  main {
+    flex: 1;
+  }
