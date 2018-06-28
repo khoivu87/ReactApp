@@ -1,13 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
+import ProductList from '../Data/Products.json';
 
-// Product data, JSON type
-const PRODUCTS = [
-    {name: "Cash money gun", price: 43.0, qty: 38, visible: true},
-    {name: "Giant inflatable unicorn", price: 23.5, qty: 3, visible: false},
-    {name: "Deal with it sunglasses", price: 11.2, qty: 17, visible: true},
-    {name: "Breaking Bad Lego set", price: 699.5, qty: 0, visible: true}
-];
+// Product data, import from Products.json file
+const PRODUCTS = ProductList; 
 
 // Base layout of Admin view page
 class AdminView extends Component {
@@ -40,8 +36,8 @@ class SearchComponent extends Component {
 }
 
 /* Table layout includes headers (table head) and body (data rows)
-Use the forEach to read data from the const PRODUCTS
-Create new row for each PRODUCT's child
+Use the forEach() loop to read data from the const PRODUCTS
+Create new row for each PRODUCT's child found -> push() method
 Parameter: child product from the PRODUCTS object key -> product name (can be other product's attribute)
 */
 class TableComponent extends Component {
