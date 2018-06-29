@@ -56,6 +56,7 @@ class TableComponent extends Component {
                 </thead>
                 <tbody>
                     {rows}
+                    <TableAddRow />
                 </tbody>
             </table>
         );
@@ -81,12 +82,30 @@ class TableRow extends Component {
     render() {
         const product = this.props.product;
         return (
-            <tr>
-                <td>{product.name}</td>
-                <td>{product.price}</td>
-                <td>{product.qty}</td>
-                <td>{product.visible}</td>
-            </tr>
+            <form>
+                <tr>
+                    <td>{product.name}</td>
+                    <td><input type="text" value={product.price} /></td>
+                    <td><input type="number" value={product.qty} /></td>
+                    <td>{product.visible}</td>
+                </tr>
+            </form>
+        );
+    }
+}
+
+// Speial row to add new product
+class TableAddRow extends Component {
+    render() {
+        return (
+            <form>
+                <tr>
+                    <td><input type="text" placeholder="Enter product name" /></td>
+                    <td><input type="text" placeholder="Enter product price" /></td>
+                    <td><input type="number" placeholder="Enter quantity" /></td>
+                    <td><input type="button" value="Add" /></td>
+                </tr>
+            </form>
         );
     }
 }
