@@ -29,7 +29,7 @@ class SearchComponent extends Component {
         return (
             <form>
                 <input type="text" placeholder="Search" />
-                <input type="button" value="Add" />
+                <input type="button" value="Filter" />
             </form>
         );
     }
