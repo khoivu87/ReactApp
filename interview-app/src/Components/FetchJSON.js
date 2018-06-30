@@ -7,10 +7,15 @@ class FetchJSONClass extends Component {
       this.state = {
         error: null,
         isLoaded: false,
-        items: []
+        productItems: []
       };
     }
   
+    /* User json-server to serve the data from Products.json to localhost:3304/prods
+    "$ json-server --watch Products.json --port 3304" -> to start json server
+    -> Must start the command from within the folder of that Products.json file
+    Still don't understand a damn thing about this componentDidMount() method
+    Needs to do further reading & practice */
     componentDidMount() {
       fetch("http://localhost:3304/prods")
         .then(res => res.json())
@@ -18,8 +23,7 @@ class FetchJSONClass extends Component {
           (result) => {
             this.setState({
               isLoaded: true,
-              items: result // no need prods WHY???
-            //   items: result.prods
+              productItems: result
             });
           },
           // Note: it's important to handle errors here
@@ -34,9 +38,11 @@ class FetchJSONClass extends Component {
         )
     }
   
+    /* Forget about those error, isLoaded variables for now
+    Can be able to add data to table at least */
     render() {
-      const { error, isLoaded, items } = this.state;
-      console.log("List items: " + items);
+      const { error, isLoaded, productItems } = this.state;
+      console.log("List items: " + productItems);
       if (error) {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {
@@ -45,7 +51,7 @@ class FetchJSONClass extends Component {
         return (
             <table>
                 <tbody>
-                    {items.map(item => (
+                    {productItems.map(item => (
                         <tr key={item.id}>
                             <td>{item.name}</td>
                             <td>{item.price}</td>
