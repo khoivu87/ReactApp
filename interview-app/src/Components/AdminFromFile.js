@@ -6,7 +6,7 @@ import ProductList from '../Data/Products.json';
 const PRODUCTS = ProductList; 
 
 // Base layout of Admin view page
-class AdminView extends Component {
+class AdminFromFile extends Component {
     render() {
         return (
             <div className="cover">
@@ -29,7 +29,7 @@ class SearchComponent extends Component {
         return (
             <form>
                 <input type="text" placeholder="Search" />
-                <input type="button" value="Filter" />
+                <button type="button" name="filterBtn">Filter</button>
             </form>
         );
     }
@@ -103,11 +103,11 @@ class TableAddRow extends Component {
                     <td><input type="text" placeholder="Enter product name" /></td>
                     <td><input type="text" placeholder="Enter product price" /></td>
                     <td><input type="number" placeholder="Enter quantity" /></td>
-                    <td><input type="button" value="Add" /></td>
+                    <td><button type="button" name="addBtn">Add</button>></td>
                 </tr>
             </form>
         );
     }
 }
 
-export default AdminView
+export default AdminFromFile;

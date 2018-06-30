@@ -38,7 +38,7 @@ class VisibleSearch extends Component {
         return (
             <form>
                 <input type="text" placeholder="Search" />
-                <input type="button" value="Search" />
+                <button type="button" name="searchBtn">Search</button>
             </form>
         );
     }

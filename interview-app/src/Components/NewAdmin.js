@@ -1,0 +1,66 @@
+import React, {Component} from 'react';
+import FetchJSON from '../Controller/FetchJSON';
+
+class NewAdmin extends Component {
+    render() {
+        return (
+            <div className="cover">
+                <div className="cover-head">
+                    <h1>Welcome to Admin view</h1>
+                    <h3>Products</h3>
+                </div>
+                <div className="cover-body">
+                    <NewSearch />
+                    <NewTable />
+                </div>
+            </div>
+        );
+    }
+}
+
+class NewSearch extends Component {
+    render() {
+        return (
+            <form>
+                <input type="text" placeholder="Search" />
+                <button type="button" name="filterBtn">Filter</button>
+            </form>
+        );
+    }
+}
+
+class NewTable extends Component {
+    render() {
+        return (
+            <table>
+                <TableHead />
+                <TableBody />
+            </table>
+        );
+    }
+}
+
+class TableHead extends Component {
+    render() {
+        return (
+            <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Visible</th>
+                </tr>
+            </thead>
+        );
+    }
+}
+
+class TableBody extends Component {
+    render() {
+        return (
+            <FetchJSON />
+        );
+    }
+}
+
+export default NewAdmin;

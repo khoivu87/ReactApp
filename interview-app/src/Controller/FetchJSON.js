@@ -41,28 +41,20 @@ class FetchJSONClass extends Component {
     /* Forget about those error, isLoaded variables for now
     Can be able to add data to table at least */
     render() {
-      const { error, isLoaded, productItems } = this.state;
+      const { productItems } = this.state;
       console.log("List items: " + productItems);
-      if (error) {
-        return <div>Error: {error.message}</div>;
-      } else if (!isLoaded) {
-        return <div>Loading...</div>;
-      } else {
-        return (
-            <table>
-                <tbody>
-                    {productItems.map(item => (
-                        <tr key={item.id}>
-                            <td>{item.name}</td>
-                            <td>{item.price}</td>
-                            <td>{item.qty}</td>
-                            <td>{item.visible}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        );
-      }
+      return (
+        <tbody>
+            {productItems.map(item => (
+                <tr key={item.id}>
+                    <td>{item.name}</td>
+                    <td>{item.price}</td>
+                    <td>{item.qty}</td>
+                    <td>{item.visible}</td>
+                </tr>
+            ))}
+        </tbody>
+      );
     }
   }
 

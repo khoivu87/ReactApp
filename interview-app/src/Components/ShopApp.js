@@ -6,9 +6,8 @@ import {
 } from 'react-router-dom';
 
 import Home from './Home.js';
-import Admin from './Admin.js';
 import Cart from './Cart.js';
-import FetchJSON from './FetchJSON.js';
+import Admin from './NewAdmin.js';
 import '../Css/index.css';
 
 class ShopApp extends React.Component {
@@ -30,8 +29,7 @@ const Navigation = () => (
                     <ul className="nav navbar-nav">
                         <li><NavLink exact to="/">Home</NavLink></li>
                         <li><NavLink exact to="/shop-n-cart">Shop and Cart</NavLink></li>
-                        <li><NavLink exact to="/product">Admin</NavLink></li>
-                        <li><NavLink exact to="/fetch-json">Fetch JSON</NavLink></li>
+                        <li><NavLink exact to="/new-product">Admin</NavLink></li>
                     </ul>
                 </div>
             </div>
@@ -43,8 +41,7 @@ const AppRout = () => (
     <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/shop-n-cart" component={Cart} />
-        <Route exact path="/product" component={Admin} />
-        <Route exact path="/fetch-json" component={FetchJSON} />
+        <Route exact path="/new-product" component={Admin} />
     </Switch>
 );
 
