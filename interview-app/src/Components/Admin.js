@@ -16,7 +16,7 @@ class AdminView extends Component {
                 </div>
                 <div className="cover-body">
                     <SearchComponent />
-                    <TableComponent products={PRODUCTS} />
+                    <TableComponent itemList={PRODUCTS} />
                 </div>
             </div>
         );
@@ -43,7 +43,7 @@ Parameter: child product from the PRODUCTS object key -> product name (can be ot
 class TableComponent extends Component {
     render() {
         const rows = [];
-        this.props.products.forEach((product) => {
+        this.props.itemList.prods.forEach((product) => {
             rows.push(
                 <TableRow product={product}
                 key={product.name} />

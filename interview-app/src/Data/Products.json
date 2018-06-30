@@ -1,8 +1,46 @@
-[
-    {"name": "Cash money gun", "price": 43.0, "qty": 38, "visible": true},
-    {"name": "Giant inflatable unicorn", "price": 23.5, "qty": 3, "visible": false},
-    {"name": "Deal with it sunglasses", "price": 11.2, "qty": 17, "visible": true},
-    {"name": "Breaking Bad Lego set", "price": 699.5, "qty": 0, "visible": false},
-    {"name": "Samsung Galaxy J7 DUO", "price": 377.56, "qty": 10, "visible": true}
-]
- 
+{
+  "prods": [
+    {
+      "id": 1,
+      "name": "Cash money gun",
+      "price": 43,
+      "qty": 38,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "name": "Giant inflatable unicorn",
+      "price": 23.5,
+      "qty": 3,
+      "visible": false
+    },
+    {
+      "id": 3,
+      "name": "Deal with it sunglasses",
+      "price": 11.2,
+      "qty": 17,
+      "visible": true
+    },
+    {
+      "id": 4,
+      "name": "Breaking Bad Lego set",
+      "price": 699.5,
+      "qty": 0,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "name": "Samsung Galaxy J7 DUO",
+      "price": 377.56,
+      "qty": 10,
+      "visible": true
+    },
+    {
+      "name": "Vascara spring bag",
+      "price": 25,
+      "qty": 50,
+      "visible": true,
+      "id": 6
+    }
+  ]
+}
