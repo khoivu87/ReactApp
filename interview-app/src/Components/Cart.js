@@ -21,7 +21,7 @@ class VisibleProduct extends Component {
     render() {
         return (
             <div className="cover">
-                <div classname="cover-head">
+                <div className="cover-head">
                     <h5>Products</h5>
                 </div>
                 <div className="cover-body">

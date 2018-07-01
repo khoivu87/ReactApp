@@ -7,7 +7,8 @@ import {
 
 import Home from './Home.js';
 import Cart from './Cart.js';
-import Admin from './NewAdmin.js';
+import Admin from './Admin.js';
+import Products from './Products.js'
 import '../Css/index.css';
 
 class ShopApp extends React.Component {
@@ -29,7 +30,8 @@ const Navigation = () => (
                     <ul className="nav navbar-nav">
                         <li><NavLink exact to="/">Home</NavLink></li>
                         <li><NavLink exact to="/shop-n-cart">Shop and Cart</NavLink></li>
-                        <li><NavLink exact to="/new-product">Admin</NavLink></li>
+                        <li><NavLink exact to="/product">Admin</NavLink></li>
+                        <li><NavLink exact to="/productCopy">Products</NavLink></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +43,8 @@ const AppRout = () => (
     <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/shop-n-cart" component={Cart} />
-        <Route exact path="/new-product" component={Admin} />
+        <Route exact path="/product" component={Admin} />
+        <Route exact path="/productCopy" component={Products} />
     </Switch>
 );
 

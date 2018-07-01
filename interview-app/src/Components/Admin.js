@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import FetchJSON from '../Controller/FetchJSON';
+import FetchTable from '../Controller/FetchTable';
+// import PostJSON from '../Controller/PostJSON.js';
 
 class NewAdmin extends Component {
     render() {
@@ -32,33 +33,7 @@ class NewSearch extends Component {
 class NewTable extends Component {
     render() {
         return (
-            <table>
-                <TableHead />
-                <TableBody />
-            </table>
-        );
-    }
-}
-
-class TableHead extends Component {
-    render() {
-        return (
-            <thead>
-                <tr>
-                    <th>Product name</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th>Visible</th>
-                </tr>
-            </thead>
-        );
-    }
-}
-
-class TableBody extends Component {
-    render() {
-        return (
-            <FetchJSON />
+            <FetchTable />
         );
     }
 }
