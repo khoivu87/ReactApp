@@ -94,7 +94,7 @@ class TableRow extends Component {
     }
 }
 
-// Speial row to add new product
+// Special row to add new product
 class TableAddRow extends Component {
     render() {
         return (
