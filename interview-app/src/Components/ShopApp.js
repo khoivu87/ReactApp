@@ -6,8 +6,9 @@ import {
 } from 'react-router-dom';
 
 import Home from './Home.js';
-import Admin from './Admin.js';
 import Cart from './Cart.js';
+import Admin from './Admin.js';
+import Products from './Products.js'
 import '../Css/index.css';
 
 class ShopApp extends React.Component {
@@ -30,6 +31,7 @@ const Navigation = () => (
                         <li><NavLink exact to="/">Home</NavLink></li>
                         <li><NavLink exact to="/shop-n-cart">Shop and Cart</NavLink></li>
                         <li><NavLink exact to="/product">Admin</NavLink></li>
+                        <li><NavLink exact to="/productCopy">Products</NavLink></li>
                     </ul>
                 </div>
             </div>
@@ -42,6 +44,7 @@ const AppRout = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/shop-n-cart" component={Cart} />
         <Route exact path="/product" component={Admin} />
+        <Route exact path="/productCopy" component={Products} />
     </Switch>
 );
 

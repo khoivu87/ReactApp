@@ -1,8 +1,12 @@
-import React, {Component} from 'react';
-import FetchTable from '../Controller/FetchTable';
-// import PostJSON from '../Controller/PostJSON.js';
+import React from 'react';
+import {Component} from 'react';
+import ProductList from '../Data/Products.json';
 
-class NewAdmin extends Component {
+// Product data, import from Products.json file
+const PRODUCTS = ProductList; 
+
+// Base layout of Admin view page
+class AdminFromFile extends Component {
     render() {
         return (
             <div className="cover">
@@ -11,15 +15,16 @@ class NewAdmin extends Component {
                     <h3>Products</h3>
                 </div>
                 <div className="cover-body">
-                    <NewSearch />
-                    <NewTable />
+                    <SearchComponent />
+                    <TableComponent itemList={PRODUCTS} />
                 </div>
             </div>
         );
     }
 }
 
-class NewSearch extends Component {
+// Search bar on the product table
+class SearchComponent extends Component {
     render() {
         return (
             <form>
@@ -30,10 +35,38 @@ class NewSearch extends Component {
     }
 }
 
-class NewTable extends Component {
+/* Table layout includes headers (table head) and body (data rows)
+Use the forEach() loop to read data from the const PRODUCTS
+Create new row for each PRODUCT's child found -> push() method
+Parameter: child product from the PRODUCTS object key -> product name (can be other product's attribute)
+*/
+class TableComponent extends Component {
+    render() {
+        const rows = [];
+        this.props.itemList.prods.forEach((product) => {
+            rows.push(
+                <TableRow product={product}
+                key={product.name} />
+            )
+        });
+        return (
+            <table>
+                <thead>
+                    <TableHead />
+                </thead>
+                <tbody>
+                    {rows}
+                    <TableAddRow />
+                </tbody>
+            </table>
+        );
+    }
+}
+
+// Stupid simple component to render the table header
+class TableHead extends Component {
     render() {
         return (
-<<<<<<< HEAD
             <tr>
                 <th>Product name</th>
                 <th>Price</th>
@@ -61,7 +94,7 @@ class TableRow extends Component {
     }
 }
 
-// Special row to add new product
+// Speial row to add new product
 class TableAddRow extends Component {
     render() {
         return (
@@ -70,14 +103,11 @@ class TableAddRow extends Component {
                     <td><input type="text" placeholder="Enter product name" /></td>
                     <td><input type="text" placeholder="Enter product price" /></td>
                     <td><input type="number" placeholder="Enter quantity" /></td>
-                    <td><input type="button" value="Add" /></td>
+                    <td><button type="button" name="addBtn">Add</button>></td>
                 </tr>
             </form>
-=======
-            <FetchTable />
->>>>>>> 43f006bfdf81f2e89f8d1e7c1eb7ae271b7ba2a1
         );
     }
 }
 
-export default NewAdmin;
+export default AdminFromFile;
