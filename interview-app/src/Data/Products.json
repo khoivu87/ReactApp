@@ -44,57 +44,105 @@
     },
     {
       "name": "Biti's Hunter Avengers",
-      "price": "23",
+      "price": 23,
       "qty": "23",
       "id": 7
     },
     {
       "name": "iPhone 10S",
-      "price": "245",
+      "price": 245,
       "qty": "15",
       "id": 8
     },
     {
       "name": "Sony Xperia XZ2 Ultra",
-      "price": "123",
+      "price": 123,
       "qty": "222",
       "id": 9
     },
     {
       "name": "Gundam Shogun",
-      "price": "100",
+      "price": 100,
       "qty": "15",
       "id": 10
     },
     {
       "name": "Sakos travel luggage",
-      "price": "200",
+      "price": 200,
       "qty": "20",
       "id": 11
     },
     {
       "name": "Brother printer",
-      "price": "250",
+      "price": 250,
       "qty": "0",
       "id": 12
     },
     {
       "name": "Alienware laptop",
-      "price": "500",
+      "price": 500,
       "qty": "12",
       "id": 13
     },
     {
       "name": "Oxford dictionary",
-      "price": "100",
+      "price": 100,
       "qty": "5",
       "id": 14
     },
     {
       "name": "JBL speakers",
-      "price": "50",
+      "price": 50,
       "qty": "0",
       "id": 15
+    },
+    {
+      "name": "Nexus 7",
+      "price": "199",
+      "qty": "28",
+      "id": 16
+    },
+    {
+      "name": "Dasani 500ml",
+      "price": "1",
+      "qty": "100",
+      "id": 17
+    },
+    {
+      "name": "Bose Speakers",
+      "price": "300",
+      "qty": "80",
+      "id": 18
+    },
+    {
+      "name": "Tokyo Drift",
+      "price": "21",
+      "qty": "222",
+      "id": 19
+    },
+    {
+      "name": "Need for Speed Carbon",
+      "price": "45",
+      "qty": "12",
+      "id": 20
+    },
+    {
+      "name": "Need for Speed Moon",
+      "price": "555",
+      "qty": "1123",
+      "id": 21
+    },
+    {
+      "name": "Drop",
+      "price": "123",
+      "qty": "123213",
+      "id": 22
+    },
+    {
+      "name": "Add",
+      "price": "44",
+      "qty": "115",
+      "id": 23
     }
   ]
 }

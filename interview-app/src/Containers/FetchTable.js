@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import {getProducts} from '../Actions/GetActions.js';
 
 class FetchJSONClass extends Component {
     constructor(props) {
@@ -9,25 +10,23 @@ class FetchJSONClass extends Component {
         isLoaded: false,
         productItems: []
       };
+      
+      getProducts().
+        then(
+          (data) => {
+            this.setState({
+              isLoaded: true,
+              productItems: data
+            });
+          },
+          (error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          }
+        );
 
-      // Best place to set initial state is the constructor, so fetch data here
-      fetch("http://localhost:3304/prods")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            productItems: result
-          });
-        },
-        // Error handling
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
       this.handleSubmit = this.handleSubmit.bind(this);
     }
   
@@ -74,7 +73,7 @@ class FetchJSONClass extends Component {
           }
       });
     }
-  
+    
     /* Forget about those error, isLoaded variables for now
     Can be able to add data to table at least */
     render() {
@@ -93,7 +92,7 @@ class FetchJSONClass extends Component {
             </thead>  
             <tbody>
               {productItems.map(item => (
-                  <tr key={'productKey' + item.id}>
+                  <tr key={'productKey' + item.name}>
                       <td>{item.name}</td>
                       <td>{item.price}</td>
                       <td>{item.qty}</td>
@@ -104,7 +103,7 @@ class FetchJSONClass extends Component {
                       <td><input type="text" id="proName" name="proName" placeholder="Product name" /></td>
                       <td><input type="number" id="proPrice" name="proPrice" placeholder="100" /></td>
                       <td><input type="number" id="proQty" name="proQty" placeholder="10" /></td>
-                      <td><button name="addBtn">Add</button></td>
+                      <td><button type="submit" name="addBtn">Add</button></td>
                   </tr>
             </tbody>
           </table>    
