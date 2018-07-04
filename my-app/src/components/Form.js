@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
-    getInitialState() {
+    constructor(props) {
+        super(props);
+        console.log(props);
+        this.state = {
+            user: this.props.user || 'some user',
+            comment: this.props.comment || 'some comment'
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    // This bitch is deprecated in React V4
+    /* getInitialState() {
         return {
-            body: this.props.body || 'some body',
-            title: this.props.title || 'some title'
+            
         }
-    }
+        console.log(this.props.comment);
+        console.log(this.props.user);
+    } */
 
-    handleBodyChange(e) {
+    handleUserChange(event) {
         this.setState({
-            body: e.target.value
+            user: event.target.value
         });
     }
 
-    handleTitleChange(e) {
+    handleCommentChange(event) {
         this.setState({
-            title: e.target.value
+            comment: event.target.value
         });
     }
 
-    handleSubit(event) {
+    handleSubmit(event) {
         event.preventDefault();
         this.props.onSubmit(this.state);
     }
@@ -30,26 +42,30 @@ class Form extends Component {
             <form name="blog_post" className="form-horizontal" onSubmit={this.handleSubmit}>
                 <div id="blog_post">
                     <div className="form-group">
-                        <label className="col-sm-2 control-label required" htmlFor="blog_post_title">Title</label>
-                        <div className="col-sm-9">
+                        <label className="col-sm-2 control-label required" htmlFor="blog_post_user">User</label>
+                        <div className="col-sm-3">
                             <input type="text"
-                                    id="blog_post_title"
+                                    id="blog_post_user"
                                     required="required"
+                                    value={this.state.user}
+                                    onChange={event => this.handleUserChange(event)}
                                     className="form-control"/>
                         </div>
                     </div>
                     <div className="form-group">
-                        <label className="col-sm-2 control-label required" htmlFor="blog_post_body">Body</label>
-                        <div className="col-sm-9">
+                        <label className="col-sm-2 control-label required" htmlFor="blog_post_comment">Comment</label>
+                        <div className="col-sm-8">
                             <input type="text"
-                                    id="blog_post_body"
+                                    id="blog_post_comment"
                                     required="required"
+                                    value={this.state.comment}
+                                    onChange={this.handleCommentChange.bind(this)}
                                     className="form-control"/>
                         </div>
                     </div>
                     <div className="form-group">
                         <div className="col-sm-2"></div>
-                        <div className="col-sm-9">
+                        <div className="col-sm-8">
                             <button type="submit"
                                     id="blog_post_submit"
                                     className="btn-default btn">

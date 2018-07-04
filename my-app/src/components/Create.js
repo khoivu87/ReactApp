@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Form from './Form.js';
+import { createBlogPost } from '../actions/blogPostActions.js';
 
 class Create extends Component {
-    handleSubit(data) {
-        console.log('form submission data', data);
+    handleSubmit(data) {
+        createBlogPost(data);
     }
 
     render() {
         return (
             <div>
-                <Form onSubmit={this.handleSubit} />
+                <Form onSubmit={this.handleSubmit} />
             </div>
         );
     }

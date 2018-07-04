@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {fetchBlogPosts} from '../actions/blogPostActions.js';
+import { fetchBlogPosts } from '../actions/blogPostActions.js';
 import Table from './Table.js';
 
 class List extends Component {
