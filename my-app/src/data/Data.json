@@ -1,0 +1,8 @@
+{"posts": [
+        {"id": 1, "user": "Mr. A", "comment": "Hi, I'm A"},
+        {"id": 2, "user": "Mrs. B", "comment": "Hi, I'm B"},
+        {"id": 3, "user": "Mrs. C", "comment": "Hi, I'm C"},
+        {"id": 4, "user": "Mr. D", "comment": "Hi, I'm D"},
+        {"id": 5, "user": "Samuel L. Jackson", "comment": "Hello MTFK"}
+    ]
+}
