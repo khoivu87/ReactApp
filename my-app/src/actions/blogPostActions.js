@@ -27,3 +27,33 @@ export function createBlogPost(data) {
         }
     );
 }
+
+export function fetchSinglePost(id) {
+    return fetch('ttp://localhost:3305/posts/' + id, {
+            method: 'GET'
+        }
+    ).then(function(response) {
+            return response.json();
+        }
+    ).catch(function(error) {
+            return error;
+        }
+    );
+}
+
+export function updateBlogPost(id, data) {
+    return fetch('http://localhost:3305/posts/' + id, {
+            method: 'PUT',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+    ).then(function(request) {
+            return request;
+        }
+    ).catch(function(error) {
+            return error;
+        }
+    );
+}

@@ -11,6 +11,10 @@ class Form extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillReceiveProps(props) {
+        this.setState(props);
+    }
+
     // This bitch is deprecated in React V4
     /* getInitialState() {
         return {

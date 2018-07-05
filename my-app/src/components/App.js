@@ -3,6 +3,7 @@ import {Route, Switch, NavLink} from 'react-router-dom';
 import Home from './Home.js';
 import List from './List.js';
 import Create from './Create.js';
+import Update from './Update.js';
 import NotFoundPage from './NotFoundPage.js';
 
 class App extends Component {
@@ -44,6 +45,7 @@ class AppRoute extends Component {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/posts" component={List} />
                     <Route exact path="/posts/create" component={Create} />
+                    <Route exact path="/posts/update/:postId" component={Update} />
                     <Route path="*" component={NotFoundPage} />
                 </Switch>
             </div>
