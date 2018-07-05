@@ -31,6 +31,7 @@ class StarWars extends Component {
                     <tr>
                         <th>Character</th>
                         <th>Gender</th>
+                        <th>Associates</th>
                         <th>Films</th>
                     </tr>
                 </thead>
@@ -39,6 +40,13 @@ class StarWars extends Component {
                     <tr key={'character' + item.name}>
                         <td>{item.name}</td>
                         <td>{item.gender}</td>
+                        <td>
+                            {item.associates.map (associate => (
+                                <ul key={'associate name' + associate.aName}>
+                                    <li>{associate.aName}</li>
+                                </ul>
+                            ))}
+                        </td>
                         <td>
                             {item.films.map (film => (
                             <ul key={film}>

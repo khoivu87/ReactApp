@@ -10,6 +10,20 @@
             "birth_year": "19BBY",
             "gender": "male",
             "homeworld": "https://swapi.co/api/planets/1/",
+            "associates": [
+                {
+                    "aName": "Obi-Wan Kenobi",
+                    "aJob": "Jedi"
+                },
+                {
+                    "aName": "Yoda",
+                    "aJob": "Master Jedi"
+                },
+                {
+                    "aName": "R2-D2",
+                    "aJob": "Droid"
+                }
+            ],
             "films": [
                 "https://swapi.co/api/films/2/",
                 "https://swapi.co/api/films/6/",
@@ -42,6 +56,16 @@
             "birth_year": "19BBY",
             "gender": "male",
             "homeworld": "https://swapi.co/api/planets/1/",
+            "associates": [
+                {
+                    "aName": "Chewbacca",
+                    "aJob": "Wookiee pilot"
+                },
+                {
+                    "aName": "Lando Calrissian",
+                    "aJob": "Smuggler"
+                }
+            ],
             "films": [
                 "https://swapi.co/api/films/2/",
                 "https://swapi.co/api/films/6/",
@@ -74,6 +98,16 @@
             "birth_year": "19BBY",
             "gender": "female",
             "homeworld": "https://swapi.co/api/planets/1/",
+            "associates": [
+                {
+                    "aName": "Amilyn Holdo",
+                    "aJob": "Vice Admiral"
+                },
+                {
+                    "aName": "C-3PO",
+                    "aJob": "Stupid droid"
+                }
+            ],
             "films": [
                 "https://swapi.co/api/films/2/",
                 "https://swapi.co/api/films/6/",
