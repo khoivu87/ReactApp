@@ -29,7 +29,7 @@ export function createBlogPost(data) {
 }
 
 export function fetchSinglePost(id) {
-    return fetch('ttp://localhost:3305/posts/' + id, {
+    return fetch('http://localhost:3305/posts/' + id, {
             method: 'GET'
         }
     ).then(function(response) {

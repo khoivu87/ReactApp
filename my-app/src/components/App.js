@@ -5,6 +5,7 @@ import List from './List.js';
 import Create from './Create.js';
 import Update from './Update.js';
 import NotFoundPage from './NotFoundPage.js';
+import StarWars from '../starwarsComponents/StarWars.js';
 
 class App extends Component {
     render() {
@@ -27,7 +28,7 @@ class Navigation extends Component {
                             <ul className="nav navbar-nav">
                                 <li><NavLink exact to="/">Home</NavLink></li>
                                 <li><NavLink exact to="/posts">List</NavLink></li>
-                                <li><NavLink to="*">Not Found Page</NavLink></li>
+                                <li><NavLink exact to="/starwars">Star Wars</NavLink></li>
                             </ul>
                         </div>
                     </div>
@@ -46,6 +47,7 @@ class AppRoute extends Component {
                     <Route exact path="/posts" component={List} />
                     <Route exact path="/posts/create" component={Create} />
                     <Route exact path="/posts/update/:postId" component={Update} />
+                    <Route exact path="/starwars" component={StarWars} />
                     <Route path="*" component={NotFoundPage} />
                 </Switch>
             </div>
