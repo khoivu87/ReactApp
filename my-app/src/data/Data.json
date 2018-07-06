@@ -2,17 +2,17 @@
   "posts": [
     {
       "user": "Samuel L. Jackson",
-      "comment": "Hello MTFK",
+      "comment": "Hello motherfuckers",
       "id": 1
     },
     {
       "user": "Vin Diesel",
-      "comment": "Family's first amigo.",
+      "comment": "You don't mess with the streets",
       "id": 2
     },
     {
       "user": "Khoi Vu",
-      "comment": "The feck man, why u no work???",
+      "comment": "Aloha, it's running",
       "id": 3
     },
     {
@@ -26,7 +26,7 @@
       "id": 5
     },
     {
-      "user": "The Rock",
+      "user": "Dwayne Johnson (The Rock)",
       "comment": "Go hardcore or go home",
       "id": 6
     },

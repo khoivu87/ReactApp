@@ -12,27 +12,28 @@ class Update extends Component {
         // this.state.props.params no longer in use
         fetchSinglePost(this.props.match.params.postId)
         .then((data) => {
-            console.log("Line 15 Update.js, data id: " + data.id);
-            console.log("Line 15 Update.js, data user: " + data.user);
+                console.log("Line 15 Update.js, data id: " + data.id);
+                console.log("Line 15 Update.js, data user: " + data.user);
                 this.setState(function(state) {
                         state.blogPost = data;
                         return state;
                     }
                 )
+                console.log("Current state: " + this.state.blogPost.user);
             }
         ).catch(function(error) {
                 return error;
             }
         );
-        console.log("Line 25 Update.js, post id: " + this.props.match.params.postId);
+        console.log("Line 28 Update.js, post id: " + this.props.match.params.postId);
     }
 
-    handleSubmit(data) {
-        console.log("Line 31 Update.js, state: " + data.id);
-        console.log("Line 32 Update.js, this: " + this.props);
+    handleSubmit(updateData) {
+        console.log("Line 32 Update.js, state: " + updateData.id);
+        console.log("Line 33 Update.js, this: " + this.props);
         // updateBlogPost(this.state.blogPost.id, data)
         // The id here couldn't get passed, why????? hard code number, ex: 3 then it runs
-        updateBlogPost(this.state.blogPost.id, data)
+        updateBlogPost(this.state.blogPost.id, updateData)
         .then(request => {
                 this.props.history.push("/posts");
             }
@@ -42,7 +43,8 @@ class Update extends Component {
     render() {
         return (
             <div>
-                <Form onSubmit={this.handleSubmit}
+                {/* Need to bind handleSubmit method here */}
+                <Form onSubmit={this.handleSubmit.bind(this)}
                         user={this.state.blogPost.user}
                         comment={this.state.blogPost.comment} />
             </div>
