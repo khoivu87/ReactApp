@@ -1,44 +1,69 @@
 {
   "posts": [
     {
-      "id": 1,
-      "user": "Mr. A",
-      "comment": "Hi, I'm A"
-    },
-    {
-      "id": 2,
-      "user": "Mrs. B",
-      "comment": "Hi, I'm B"
-    },
-    {
-      "id": 3,
-      "user": "Mrs. C",
-      "comment": "Hi, I'm C"
-    },
-    {
-      "id": 4,
-      "user": "Mr. D",
-      "comment": "Hi, I'm D"
-    },
-    {
-      "id": 5,
       "user": "Samuel L. Jackson",
-      "comment": "Hello MTFK"
+      "comment": "Hello MTFK",
+      "id": 1
     },
     {
       "user": "Vin Diesel",
       "comment": "Family's first amigo.",
-      "id": 6
+      "id": 2
     },
     {
       "user": "Khoi Vu",
-      "comment": "React is hard but fun",
-      "id": 7
+      "comment": "The feck man, why u no work???",
+      "id": 3
     },
     {
       "user": "Stupid dev",
       "comment": "WTF is going on? How can this not run?",
+      "id": 4
+    },
+    {
+      "user": "New blood on page",
+      "comment": "Huh? What do you want from me?",
+      "id": 5
+    },
+    {
+      "user": "The Rock",
+      "comment": "Go hardcore or go home",
+      "id": 6
+    },
+    {
+      "user": "Carl Johnson",
+      "comment": "Life's a bitch",
+      "id": 7
+    },
+    {
+      "user": "Benjamin Franklin",
+      "comment": "Tell me and I forget. Tech me and I remember. Involve me and I learn.",
       "id": 8
+    },
+    {
+      "user": "Abraham Lincoln",
+      "comment": "Nearly all man can stand adversity, but if you wan to test a man's character, give him power.",
+      "id": 9
+    },
+    {
+      "user": "Albert Einstein",
+      "comment": "Anyone who has never made a mistake has never tried anything new.",
+      "id": 10
+    },
+    {
+      "user": "Clint Eastwood",
+      "comment": "Fate pulls you in different directions",
+      "id": 11
+    },
+    {
+      "user": "Revelation 21:6",
+      "comment": "It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely.",
+      "id": 12
+    },
+    {
+      "user": "some user 1",
+      "comment": "some comment 1",
+      "id": 13
     }
   ]
 }

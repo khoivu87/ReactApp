@@ -8,10 +8,13 @@ class Update extends Component {
         this.state = {
             blogPost: []
         }
-
-        fetchSinglePost(this.props.params.postId)
-        .then(function(data) {
-                this.setState(function(state){
+        console.log("Line 11 Update.js: " + this.props.match.params.postId);
+        // this.state.props.params no longer in use
+        fetchSinglePost(this.props.match.params.postId)
+        .then((data) => {
+            console.log("Line 15 Update.js, data id: " + data.id);
+            console.log("Line 15 Update.js, data user: " + data.user);
+                this.setState(function(state) {
                         state.blogPost = data;
                         return state;
                     }
@@ -21,10 +24,19 @@ class Update extends Component {
                 return error;
             }
         );
+        console.log("Line 25 Update.js, post id: " + this.props.match.params.postId);
     }
 
     handleSubmit(data) {
-        updateBlogPost(this.state.blogPost.id, data);
+        console.log("Line 31 Update.js, state: " + data.id);
+        console.log("Line 32 Update.js, this: " + this.props);
+        // updateBlogPost(this.state.blogPost.id, data)
+        // The id here couldn't get passed, why????? hard code number, ex: 3 then it runs
+        updateBlogPost(this.state.blogPost.id, data)
+        .then(request => {
+                this.props.history.push("/posts");
+            }
+        );
     }
 
     render() {

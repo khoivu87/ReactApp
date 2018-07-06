@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Table extends Component {
     // Useless constructor
 /*     constructor(props) {
         super(props);
     } */
+
+    deleteHandler(i, event) {
+        event.preventDefault();
+        this.props.onDelete(this.props.blogPosts[i].id);
+    }
 
     render() {
         return (
@@ -18,21 +24,24 @@ class Table extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {this.props.blogPosts && this.props.blogPosts.map(function(post) {
+                    {this.props.blogPosts.map(function(post) {
                         return(
                             <tr key={post.id}>
                                 <td>{post.id}</td>
                                 <td>{post.user}</td>
                                 <td>{post.comment}</td>
                                 <td>
-                                    <a href="" className="btn btn-default btn-sm">Edit</a>
-                                    <a href="" className="btn btn-default btn-sm">Delete</a>
+                                    <NavLink className="btn btn-default btn-sm"
+                                        to={"/posts/update/" + post.id}>Edit</NavLink>
+                                    <button className="btn btn-default btn-sm"
+                                        >Delete</button>
                                 </td>
                             </tr>
                         );
                     })}
                     </tbody>
                 </table>
+                <NavLink to="/posts/create" className="btn btn-lg btn-success">Create</NavLink>
             </div>
         );
     }

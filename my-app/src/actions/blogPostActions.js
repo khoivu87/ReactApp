@@ -41,14 +41,27 @@ export function fetchSinglePost(id) {
     );
 }
 
-export function updateBlogPost(id, data) {
-    return fetch('http://localhost:3305/posts/' + id, {
+export function updateBlogPost(updateId, data) {
+    return fetch('http://localhost:3305/posts/' + updateId, {
             method: 'PUT',
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json'
             }
         }
+    ).then(function(request) {
+            return request;
+        }
+    ).catch(function(error) {
+            return error;
+        }
+    );
+}
+
+export function deleteBlogPost(id) {
+    return fetch('http://localhost:3305/posts/' + id, {
+            method: 'DELETE'
+        }    
     ).then(function(request) {
             return request;
         }

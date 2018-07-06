@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchBlogPosts } from '../actions/blogPostActions.js';
+import { deleteBlogPost } from '../actions/blogPostActions.js';
 import Table from './Table.js';
 
 class List extends Component {
@@ -27,10 +28,31 @@ class List extends Component {
         );
     }
 
+    onDelete(id) {
+        deleteBlogPost(id)
+        .then((data) => {
+            let blogPosts = this.state.blogPosts.filter((post) => {
+                    return id !== post.id;
+                }
+            );
+
+            this.setState(function(state) {
+                    state.blogPosts = blogPosts;
+                    return state;
+                }
+            );
+        })
+        .catch(function(error) {
+                return error;
+            }
+        );
+    }
+
     render() {
         return (
             <div>
-                <Table blogPosts={this.state.blogPosts} />
+                <Table blogPosts={this.state.blogPosts}
+                        onDelete={this.onDelete.bind(this)} />
             </div>
         );
     }

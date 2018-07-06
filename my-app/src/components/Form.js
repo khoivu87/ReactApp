@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Form extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
         this.state = {
             user: this.props.user || 'some user',
             comment: this.props.comment || 'some comment'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Switch, NavLink} from 'react-router-dom';
+import {Route, Switch, NavLink, withRouter} from 'react-router-dom';
 import Home from './Home.js';
 import List from './List.js';
 import Create from './Create.js';
@@ -45,10 +45,9 @@ class AppRoute extends Component {
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/posts" component={List} />
-                    <Route exact path="/posts/create" component={Create} />
-                    <Route exact path="/posts/update/:postId" component={Update} />
+                    <Route exact path="/posts/create" component={withRouter(Create)} />
+                    <Route exact path="/posts/update/:postId" component={withRouter(Update)} />
                     <Route exact path="/starwars" component={StarWars} />
-                    <Route path="*" component={NotFoundPage} />
                 </Switch>
             </div>
         );
