@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchBlogPosts } from '../actions/blogPostActions.js';
+import { fetchAllPosts } from '../actions/blogPostActions.js';
 import { deleteBlogPost } from '../actions/blogPostActions.js';
 import Table from './Table.js';
 
@@ -10,7 +10,7 @@ class List extends Component {
             blogPosts: []
         };
 
-        fetchBlogPosts()
+        fetchAllPosts()
         .then(
             (data) => {
                 // Need to understand 'this' here. Is it the List class? How to call it?

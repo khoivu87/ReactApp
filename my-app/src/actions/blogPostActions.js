@@ -1,4 +1,4 @@
-export function fetchBlogPosts() {
+export function fetchAllPosts() {
     return fetch('http://localhost:3305/posts', {
             method: 'GET'
         }
@@ -28,7 +28,7 @@ export function createBlogPost(data) {
     );
 }
 
-export function fetchSinglePost(id) {
+export function fetchPostById(id) {
     return fetch('http://localhost:3305/posts/' + id, {
             method: 'GET'
         }

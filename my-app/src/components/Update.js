@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchSinglePost, updateBlogPost } from '../actions/blogPostActions.js';
+import { fetchPostById, updateBlogPost } from '../actions/blogPostActions.js';
 import Form from './Form.js';
 
 class Update extends Component {
@@ -10,7 +10,7 @@ class Update extends Component {
         }
         console.log("Line 11 Update.js: " + this.props.match.params.postId);
         // this.state.props.params no longer in use
-        fetchSinglePost(this.props.match.params.postId)
+        fetchPostById(this.props.match.params.postId)
         .then((data) => {
                 console.log("Line 15 Update.js, data id: " + data.id);
                 console.log("Line 15 Update.js, data user: " + data.user);
