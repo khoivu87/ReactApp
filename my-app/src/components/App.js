@@ -48,6 +48,7 @@ class AppRoute extends Component {
                     <Route exact path="/posts/create" component={withRouter(Create)} />
                     <Route exact path="/posts/update/:postId" component={withRouter(Update)} />
                     <Route exact path="/starwars" component={StarWars} />
+                    <Route path="/*" component={NotFoundPage} />
                 </Switch>
             </div>
         );

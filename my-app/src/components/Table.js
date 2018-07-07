@@ -3,13 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 class Table extends Component {
     // Useless constructor
-/*     constructor(props) {
+    constructor(props) {
         super(props);
-    } */
+        this.deleteHandler = this.deleteHandler.bind(this);
+    }
 
-    deleteHandler(i, event) {
+    // Need to get the index of current element
+    deleteHandler(index, event) {
+        console.log("Table.js, deleteHandler: " + this.props.blogPosts[index].id);
         event.preventDefault();
-        this.props.onDelete(this.props.blogPosts[i].id);
+        this.props.onDelete(this.props.blogPosts[index].id);
     }
 
     render() {
@@ -24,7 +27,7 @@ class Table extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {this.props.blogPosts.map(function(post) {
+                    {this.props.blogPosts && this.props.blogPosts.map((post, index) => {
                         return(
                             <tr key={post.id}>
                                 <td>{post.id}</td>
@@ -32,9 +35,14 @@ class Table extends Component {
                                 <td>{post.comment}</td>
                                 <td>
                                     <NavLink className="btn btn-default btn-sm"
-                                        to={"/posts/update/" + post.id}>Edit</NavLink>
-                                    <button className="btn btn-default btn-sm"
-                                        >Delete</button>
+                                        to={"/posts/update/" + post.id}>
+                                        Edit
+                                    </NavLink>
+                                    <button type="button"
+                                        className="btn btn-default btn-sm"
+                                        onClick={this.deleteHandler.bind(this, index)}>
+                                        Delete
+                                    </button>
                                 </td>
                             </tr>
                         );
@@ -48,3 +56,4 @@ class Table extends Component {
 }
 
 export default Table;
+// If I turn (post, index) => { } at line 30 into a function, it doesn't work. Need to understand why
