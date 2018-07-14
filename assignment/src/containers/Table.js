@@ -2,6 +2,7 @@ import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { getAllProducts, updateProductById } from '../actions/ProductActions.js';
 const options = {
   clearSearch: true
 };
@@ -29,12 +30,16 @@ export default class Allproducts extends React.Component {
     };
 
     // Initial values must be in the constructor
-    fetch("http://localhost:3001/PRODUCTS")
-    .then(res => res.json())
+    getAllProducts()
     .then(
-      (data) => this.setState({
-        results: data
-      })
+      (data) => this.setState(
+        {
+          results: data
+        }
+      )
+    ).catch(function(error) {
+        return error;
+      }
     );
   }
 
@@ -42,12 +47,13 @@ export default class Allproducts extends React.Component {
     console.log(`Save cell ${cellName} with value ${cellValue}`);
     console.log('The whole row :');
     console.log(row);
-    fetch('http://localhost:3001/PRODUCTS/' + row.id, {
-      method: 'put',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(row)
-    })
-    .then(this.notifyU);
+
+    updateProductById(row.id, row)
+    .then(this.notifyU)
+    .catch(function(error) {
+        return error;
+      }
+    );
   }
 
   render() {

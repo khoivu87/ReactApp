@@ -30,7 +30,7 @@
     },
     {
       "isEnabled": "false",
-      "name": "planar2",
+      "name": "The hell",
       "qty": "50",
       "price": "1500",
       "id": 5
@@ -44,14 +44,14 @@
     },
     {
       "isEnabled": true,
-      "name": "hey it's me",
+      "name": "Me my ass",
       "qty": "10",
       "price": "3",
       "id": 7
     },
     {
       "isEnabled": true,
-      "name": "dynamic3",
+      "name": "Alone in the dark",
       "qty": "12",
       "price": "5",
       "id": 8
@@ -83,12 +83,54 @@
       "qty": "0",
       "price": "0",
       "id": 12
+    },
+    {
+      "isEnabled": true,
+      "name": "Try something new",
+      "qty": "0",
+      "price": "0",
+      "id": 13
+    },
+    {
+      "isEnabled": true,
+      "name": "Will you auto load?",
+      "qty": "0",
+      "price": "0",
+      "id": 14
+    },
+    {
+      "isEnabled": true,
+      "name": "Oh yeah",
+      "qty": "0",
+      "price": "0",
+      "id": 15
+    },
+    {
+      "isEnabled": true,
+      "name": "Again bitch",
+      "qty": "0",
+      "price": "0",
+      "id": 16
+    },
+    {
+      "isEnabled": true,
+      "name": "Why so serious?",
+      "qty": "0",
+      "price": "0",
+      "id": 17
+    },
+    {
+      "isEnabled": true,
+      "name": "Call me maybe",
+      "qty": "0",
+      "price": "0",
+      "id": 18
     }
   ],
   "CART": [
     {
-      "name": "hey it's me",
-      "price": "0",
+      "name": "planar",
+      "price": "1000",
       "cqty": "1",
       "id": 1
     }

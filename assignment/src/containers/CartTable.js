@@ -1,5 +1,7 @@
 import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import { getAllProducts } from '../actions/ProductActions.js';
+import { addToCart } from '../actions/CartActions.js';
 
 function numSort(a, b, order) {   // order is desc or asc
     if (order === 'desc') {
@@ -13,17 +15,20 @@ const options = {
     onRowClick(row, isSelected) {
         console.log(row);
         console.log(`selected: ${isSelected}`);
-        fetch('http://localhost:3001/CART', {
-            method: 'post',
-            headers: { "Content-Type": "application/json" },
-            body:JSON.stringify(
-                {
-                    "name":row.name, 
-                    "price":row.price, 
-                    "cqty": "1"
-                }
-            )
-        });
+
+        addToCart(
+            {
+                "name":row.name, 
+                "price":row.price, 
+                "cqty": "1"
+            }
+        ).then(request => {
+                this.props.history.push("/shop-n-cart");
+            }
+        ).catch(function(error){
+                return error;
+            }
+        );
     }
 }
 
@@ -34,12 +39,14 @@ export default class CartTable extends React.Component {
             results: []
         };
 
-        fetch("http://localhost:3001/PRODUCTS")
-        .then(res => res.json())
+        getAllProducts()
         .then(
-            (data) => this.setState({
-                results: data
-        }));
+            (data) => this.setState(
+                {
+                    results: data
+                }    
+            )
+        )
     }
 
     render() {
@@ -48,7 +55,7 @@ export default class CartTable extends React.Component {
 
         return (
             <div>
-                <BootstrapTable data={shop} striped={true} hover={true} options={ options } ref='table'>
+                <BootstrapTable data={shop} striped={true} hover={true} options={options} ref='table'>
                     <TableHeaderColumn dataField="id" isKey={true} dataAlign="center" dataSort={true}>Product ID</TableHeaderColumn>
                     <TableHeaderColumn dataField="name" dataSort={true}>Product Name</TableHeaderColumn>
                     <TableHeaderColumn dataField="qty" dataSort sortFunc={numSort}>Qty</TableHeaderColumn>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import { getAllCartItems } from '../actions/CartActions.js';
 
 export default class CartItems extends React.Component {
     constructor(props) {
@@ -8,12 +9,13 @@ export default class CartItems extends React.Component {
             onCart: []
         };
 
-        fetch("http://localhost:3001/CART")
-        .then(res => res.json())
+        getAllCartItems()
         .then(
             (data) => this.setState({
-                onCart: data,
-        }));
+                    onCart: data
+                }
+            )
+        )
     }
 
     render() {

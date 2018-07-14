@@ -5,7 +5,7 @@ export function fetchAllPosts() {
     ).then(function(response) {
             return response.json();
         }
-    ).catch(function(error){
+    ).catch(function(error) {
             return error;
         }
     );
@@ -16,13 +16,13 @@ export function createBlogPost(data) {
             method: 'POST',
             body: JSON.stringify(data),
             headers:{
-            'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             }
         }
     ).then(function(request) {
             return request;
         }
-    ).catch(function(error){
+    ).catch(function(error) {
             return error;
         }
     );
