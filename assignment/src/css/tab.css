@@ -1,0 +1,68 @@
+table {
+    border-collapse: separate;
+    width: 100%;
+}
+
+td {
+    margin: 10%;  
+    height: 10px;
+    border: 0.5px solid #a3a3a3;
+    text-align: center;
+}
+
+th {
+    height: 50px;
+    background-color: #FFA500;
+    border: 0.5px solid #000000;
+    text-align: center;
+}
+
+td:hover{
+    background-color: #ddd;
+}
+
+h1 {
+    width:100px;
+    margin-top:-15px;
+    margin-left:5px;
+    background:white;
+    font-size: 24px;
+}
+caption{
+    font-size: 20px;
+}
+.cross {
+    border:1px solid black;
+    padding: 5px;
+}
+
+.left {
+    width: 69%;
+    float: left;
+    border:1px solid black;
+    padding: 5px;
+}
+
+.right {
+    width: 29%;
+    float: right;
+    border:1px solid black;
+    padding: 5px;
+}
+
+.floater {
+    float: right;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.search {
+    width: 50%;
+    float: left;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+input {
+    width: 100%;
+}

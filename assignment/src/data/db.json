@@ -1,0 +1,96 @@
+{
+  "PRODUCTS": [
+    {
+      "isEnabled": true,
+      "name": "planar",
+      "qty": "5",
+      "price": "1000",
+      "id": 1
+    },
+    {
+      "isEnabled": true,
+      "name": "hell yeah",
+      "qty": "5",
+      "price": "1000",
+      "id": 2
+    },
+    {
+      "isEnabled": true,
+      "name": "electrostat",
+      "qty": "3",
+      "price": "10000",
+      "id": 3
+    },
+    {
+      "isEnabled": false,
+      "name": "dynamic2",
+      "qty": "70",
+      "price": "150",
+      "id": 4
+    },
+    {
+      "isEnabled": "false",
+      "name": "planar2",
+      "qty": "50",
+      "price": "1500",
+      "id": 5
+    },
+    {
+      "isEnabled": true,
+      "name": "planar78",
+      "qty": "5",
+      "price": "1000",
+      "id": 6
+    },
+    {
+      "isEnabled": true,
+      "name": "hey it's me",
+      "qty": "10",
+      "price": "3",
+      "id": 7
+    },
+    {
+      "isEnabled": true,
+      "name": "dynamic3",
+      "qty": "12",
+      "price": "5",
+      "id": 8
+    },
+    {
+      "isEnabled": true,
+      "name": "Dragon Quest",
+      "qty": "0",
+      "price": "0",
+      "id": 9
+    },
+    {
+      "isEnabled": true,
+      "name": "Gundam",
+      "qty": "0",
+      "price": "0",
+      "id": 10
+    },
+    {
+      "isEnabled": "false",
+      "name": "Naruto",
+      "qty": "0",
+      "price": "0",
+      "id": 11
+    },
+    {
+      "isEnabled": true,
+      "name": "Something",
+      "qty": "0",
+      "price": "0",
+      "id": 12
+    }
+  ],
+  "CART": [
+    {
+      "name": "hey it's me",
+      "price": "0",
+      "cqty": "1",
+      "id": 1
+    }
+  ]
+}
