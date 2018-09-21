@@ -1,0 +1,33 @@
+{
+  "PRODUCTS": [
+    {
+      "isEnabled": true,
+      "name": "planar",
+      "qty": "5",
+      "price": "1000",
+      "id": 1
+    },
+    {
+      "isEnabled": true,
+      "name": "hell yeah",
+      "qty": "5",
+      "price": "1000",
+      "id": 2
+    },
+    {
+      "isEnabled": true,
+      "name": "electrostat",
+      "qty": "3",
+      "price": "10000",
+      "id": 3
+    },
+    {
+      "isEnabled": false,
+      "name": "dynamic2",
+      "qty": "70",
+      "price": "150",
+      "id": 4
+    }
+  ],
+  "CART": []
+}
