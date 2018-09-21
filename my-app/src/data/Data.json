@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "user": "Samuel L. Jackson",
+      "comment": "Hello motherfuckers",
+      "id": 1
+    },
+    {
+      "user": "Vin Diesel",
+      "comment": "You don't mess with the streets",
+      "id": 2
+    },
+    {
+      "user": "Khoi Vu",
+      "comment": "Long way ahead, so let's do it step by step",
+      "id": 3
+    },
+    {
+      "user": "Stupid dev",
+      "comment": "WTF is going on? How can this not run?",
+      "id": 4
+    },
+    {
+      "user": "New blood on page",
+      "comment": "Huh? What do you want from me?",
+      "id": 5
+    },
+    {
+      "user": "Dwayne Johnson (The Rock)",
+      "comment": "Go hardcore or go home",
+      "id": 6
+    },
+    {
+      "user": "Carl Johnson",
+      "comment": "Life's a bitch",
+      "id": 7
+    },
+    {
+      "user": "Benjamin Franklin",
+      "comment": "Tell me and I forget. Tech me and I remember. Involve me and I learn.",
+      "id": 8
+    },
+    {
+      "user": "Abraham Lincoln",
+      "comment": "Nearly all man can stand adversity, but if you wan to test a man's character, give him power.",
+      "id": 9
+    },
+    {
+      "user": "Albert Einstein",
+      "comment": "Anyone who has never made a mistake has never tried anything new.",
+      "id": 10
+    },
+    {
+      "user": "Clint Eastwood",
+      "comment": "Fate pulls you in different directions",
+      "id": 11
+    },
+    {
+      "user": "Revelation 21:6",
+      "comment": "It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely.",
+      "id": 12
+    }
+  ]
+}
